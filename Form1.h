@@ -64,15 +64,15 @@ namespace WindowsFormApplication1 {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->plikToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->edycjaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->oProgramieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->opcja1ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->opcja2ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->wyjdzToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->edycjaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->opcja3ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->opcja4ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->opcja31ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->opcja32ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->opcja4ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->oProgramieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->oAutorzeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
@@ -101,23 +101,6 @@ namespace WindowsFormApplication1 {
 			this->plikToolStripMenuItem->Size = System::Drawing::Size(38, 20);
 			this->plikToolStripMenuItem->Text = L"Plik";
 			// 
-			// edycjaToolStripMenuItem
-			// 
-			this->edycjaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->opcja3ToolStripMenuItem,
-					this->opcja4ToolStripMenuItem
-			});
-			this->edycjaToolStripMenuItem->Name = L"edycjaToolStripMenuItem";
-			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(53, 20);
-			this->edycjaToolStripMenuItem->Text = L"Edycja";
-			// 
-			// oProgramieToolStripMenuItem
-			// 
-			this->oProgramieToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->oAutorzeToolStripMenuItem });
-			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(86, 20);
-			this->oProgramieToolStripMenuItem->Text = L"O programie";
-			// 
 			// opcja1ToolStripMenuItem
 			// 
 			this->opcja1ToolStripMenuItem->Name = L"opcja1ToolStripMenuItem";
@@ -134,7 +117,18 @@ namespace WindowsFormApplication1 {
 			// 
 			this->wyjdzToolStripMenuItem->Name = L"wyjdzToolStripMenuItem";
 			this->wyjdzToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->wyjdzToolStripMenuItem->Text = L"WyjdŸ.";
+			this->wyjdzToolStripMenuItem->Text = L"WyjdŸ";
+			this->wyjdzToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::wyjdzToolStripMenuItem_Click_1);
+			// 
+			// edycjaToolStripMenuItem
+			// 
+			this->edycjaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->opcja3ToolStripMenuItem,
+					this->opcja4ToolStripMenuItem
+			});
+			this->edycjaToolStripMenuItem->Name = L"edycjaToolStripMenuItem";
+			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(53, 20);
+			this->edycjaToolStripMenuItem->Text = L"Edycja";
 			// 
 			// opcja3ToolStripMenuItem
 			// 
@@ -143,32 +137,38 @@ namespace WindowsFormApplication1 {
 					this->opcja32ToolStripMenuItem
 			});
 			this->opcja3ToolStripMenuItem->Name = L"opcja3ToolStripMenuItem";
-			this->opcja3ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->opcja3ToolStripMenuItem->Size = System::Drawing::Size(114, 22);
 			this->opcja3ToolStripMenuItem->Text = L"Opcja 3";
-			this->opcja3ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::opcja3ToolStripMenuItem_Click);
-			// 
-			// opcja4ToolStripMenuItem
-			// 
-			this->opcja4ToolStripMenuItem->Name = L"opcja4ToolStripMenuItem";
-			this->opcja4ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->opcja4ToolStripMenuItem->Text = L"Opcja 4";
 			// 
 			// opcja31ToolStripMenuItem
 			// 
 			this->opcja31ToolStripMenuItem->Name = L"opcja31ToolStripMenuItem";
-			this->opcja31ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->opcja31ToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->opcja31ToolStripMenuItem->Text = L"Opcja 3.1";
 			// 
 			// opcja32ToolStripMenuItem
 			// 
 			this->opcja32ToolStripMenuItem->Name = L"opcja32ToolStripMenuItem";
-			this->opcja32ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->opcja32ToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->opcja32ToolStripMenuItem->Text = L"Opcja 3.2";
+			// 
+			// opcja4ToolStripMenuItem
+			// 
+			this->opcja4ToolStripMenuItem->Name = L"opcja4ToolStripMenuItem";
+			this->opcja4ToolStripMenuItem->Size = System::Drawing::Size(114, 22);
+			this->opcja4ToolStripMenuItem->Text = L"Opcja 4";
+			// 
+			// oProgramieToolStripMenuItem
+			// 
+			this->oProgramieToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->oAutorzeToolStripMenuItem });
+			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(86, 20);
+			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			// 
 			// oAutorzeToolStripMenuItem
 			// 
 			this->oAutorzeToolStripMenuItem->Name = L"oAutorzeToolStripMenuItem";
-			this->oAutorzeToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->oAutorzeToolStripMenuItem->Size = System::Drawing::Size(127, 22);
 			this->oAutorzeToolStripMenuItem->Text = L"O Autorze";
 			// 
 			// Form1
@@ -187,11 +187,10 @@ namespace WindowsFormApplication1 {
 
 		}
 #pragma endregion
-	private: System::Void opcja3ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-			 private: System::Void wyjdzToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e){
-				 Close();
-			 }
+
+private: System::Void wyjdzToolStripMenuItem_Click_1(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
 };
 }
 
